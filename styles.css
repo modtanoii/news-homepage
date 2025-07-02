@@ -63,7 +63,7 @@ nav {
     color: var(--Soft-red);
 }
 
-.menu {
+.menu, .close {
     display: none;
 }
 
@@ -212,7 +212,7 @@ nav {
 }
 
 .num {
-    color: var(--Grayish-blue);
+    color: var(--Soft-red);
     font-size: 2rem;
 }
 
@@ -233,6 +233,33 @@ nav {
 
     .nav-links {
         display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: white;
+        padding: 2rem;
+        gap: 1.5rem;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        width: 70%;
+        height: 100vh;
+    }
+
+    .close {
+        display: none;
+        align-self: flex-end;
+    }
+
+    nav.menu-toggled .menu {
+        display: none;
+    }
+
+    nav.menu-toggled .close {
+        display: flex;
     }
 
     .menu {
